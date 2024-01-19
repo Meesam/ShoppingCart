@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/ShoppingCartWeb.styles.css" asp-append-version="true" />
 </head>
-<body>
-    <header class="w-full bg-white dark:bg-neutral-800 h-16 shadow-sm flex items-center border-b border-neutral-100 dark:border-neutral-700">
-        <nav>
-            <div class="flex gap-6 items-center">
+<body class="">
+    
+        <nav class="w-full bg-white dark:bg-neutral-800 h-16 shadow-sm flex items-center border-b border-neutral-100 dark:border-neutral-700">
+        <div class="flex gap-6 items-center w-full">
                 <a class="ml-5" asp-area="" asp-controller="Home" asp-action="Index">
                     <img class="h-14" src="images/shopping-logo.webp" alt="Shopping Cart" />
                 </a>
@@ -25,15 +25,16 @@
                         </li>
                     </ul>
                 </div>
-                @* <div class="mr-auto">
-                    <label class="switch">
-                        <input type="checkbox" checked>
+                 <div class="ml-auto mr-4  flex gap-2 items-center">
+                <p class="text-sm text-black dark:text-white">Dark Mode</p>
+                     <label class="switch">
+                        <input type="checkbox" id="chkLocalStorage">
                         <span class="slider round"></span>
                     </label>
-                </div> *@
+                </div> 
             </div>
         </nav>
-    </header>
+    
     <div class="bg-white dark:bg-neutral-800 h-screen">
         <main role="main">
             @RenderBody()
@@ -46,7 +47,6 @@
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
