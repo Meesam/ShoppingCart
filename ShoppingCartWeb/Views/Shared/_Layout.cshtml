@@ -8,9 +8,8 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/ShoppingCartWeb.styles.css" asp-append-version="true" />
 </head>
-<body class="">
-    
-        <nav class="w-full bg-white dark:bg-neutral-800 h-16 shadow-sm flex items-center border-b border-neutral-100 dark:border-neutral-700">
+<body class="h-screen">
+        <nav class="w-full bg-white dark:bg-neutral-800 h-16 shadow-sm dark:shadow-sm flex items-center border-b border-neutral-100 dark:border-neutral-700">
         <div class="flex gap-6 items-center w-full">
                 <a class="ml-5" asp-area="" asp-controller="Home" asp-action="Index">
                     <img class="h-14" src="images/shopping-logo.webp" alt="Shopping Cart" />
@@ -21,7 +20,13 @@
                             <a class="hover:underline text-black dark:text-white" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li>
-                            <a class="hover:underline text-black dark:text-white" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="hover:underline text-black dark:text-white" asp-area="" asp-controller="Home" asp-action="Index">Services</a>
+                        </li>
+                        <li>
+                            <a class="hover:underline text-black dark:text-white" asp-area="" asp-controller="Home" asp-action="Index">Products</a>
+                        </li>
+                        <li>
+                            <a class="hover:underline text-black dark:text-white" asp-area="" asp-controller="Home" asp-action="Privacy">About us</a>
                         </li>
                     </ul>
                 </div>
@@ -41,9 +46,9 @@
         </main>
     </div>
 
-    <footer class="bg-white dark:bg-neutral-800 border-t border-neutral-100 dark:border-neutral-700">
-        <div class="container text-black dark:text-white ">
-            &copy; 2024 - ShoppingCartWeb - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <footer class="bg-white dark:bg-neutral-800 border-t border-neutral-100 dark:border-neutral-700 h-16 flex items-center justify-center">
+        <div class="text-black dark:text-white text-xs">
+            &copy; 2024 - Shopping Cart
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

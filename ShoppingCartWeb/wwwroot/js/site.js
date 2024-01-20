@@ -4,11 +4,7 @@
 // Write your JavaScript code.
 
 localStorage.theme = 'dark'
-
-
-
 $("#chkLocalStorage").on("click", function () {
-    debugger
     localStorage.theme === 'light' ? 'dark' : "light"
     if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
         document.documentElement.classList.add('dark')
