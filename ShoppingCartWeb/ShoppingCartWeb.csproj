@@ -13,4 +13,33 @@
     <None Remove="wwwroot\lib\bootstrap\**" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Controllers\" />
+    <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Areas\Admin\Views\" />
+    <Folder Include="Areas\ClientAdmin\Controllers\" />
+    <Folder Include="Areas\ClientAdmin\Data\" />
+    <Folder Include="Areas\ClientAdmin\Models\" />
+    <Folder Include="Areas\ClientAdmin\Views\" />
+    <Folder Include="Areas\Customers\Controllers\" />
+    <Folder Include="Areas\Customers\Data\" />
+    <Folder Include="Areas\Customers\Models\" />
+    <Folder Include="Areas\Customers\Views\" />
+    <Folder Include="Areas\Products\Data\" />
+    <Folder Include="Areas\Products\Models\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter" Version="8.0.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ShoppingCart.DataAccess\ShoppingCart.DataAccess.csproj" />
+    <ProjectReference Include="..\ShoppingCart.EmailService\ShoppingCart.EmailService.csproj" />
+    <ProjectReference Include="..\ShoppingCart.Models\ShoppingCart.Models.csproj" />
+    <ProjectReference Include="..\ShoppingCart.PaymentService\ShoppingCart.PaymentService.csproj" />
+  </ItemGroup>
+
 </Project>

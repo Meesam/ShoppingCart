@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ShoppingCartWeb</title>
+    <link href="~/css/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ShoppingCartWeb.styles.css" asp-append-version="true" />
+</head>
+<body class="h-screen">
+    <nav class="w-full bg-white dark:bg-neutral-800 h-16 shadow-sm dark:shadow-sm flex items-center border-b border-neutral-100 dark:border-neutral-700">
+        <div class="flex gap-6 items-center w-full">
+            <a class="ml-5" asp-area="" asp-controller="Home" asp-action="Index">
+                <img class="h-14" src="images/shopping-logo.webp" alt="Shopping Cart" />
+            </a>
+            <div>
+                <ul class="flex gap-6">
+                    <li>
+                        <a class="hover:underline text-black dark:text-white" asp-area="" asp-controller="Home" asp-action="Index">Add Product</a>
+                    </li>
+                    <li>
+                        <a class="hover:underline text-black dark:text-white" asp-area="" asp-controller="Home" asp-action="Index">Customers</a>
+                    </li>
+                    <li>
+                        <a class="hover:underline text-black dark:text-white" asp-area="Products" asp-controller="Home" asp-action="Index">Users</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="ml-auto mr-4  flex gap-2 items-center">
+                <p class="text-sm text-black dark:text-white">Dark Mode</p>
+                <label class="switch">
+                    <input type="checkbox" id="chkLocalStorage">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+    </nav>
+
+    <div class="bg-white dark:bg-neutral-800 h-screen">
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="bg-white dark:bg-neutral-800 border-t border-neutral-100 dark:border-neutral-700 h-16 flex items-center justify-center">
+        <div class="text-black dark:text-white text-xs">
+            &copy; 2024 - Shopping Cart
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

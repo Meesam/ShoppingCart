@@ -23,5 +23,7 @@ namespace ShoppingCart.Models
         [Required(ErrorMessage = "Product description is required")]
         [MinLength(5)]
         public string ProductDescription { get; set; } = string.Empty;
+
+
     }
 }
