@@ -9,47 +9,60 @@
     <link rel="stylesheet" href="~/ShoppingCartWeb.styles.css" asp-append-version="true" />
 </head>
 <body class="h-screen">
-        <nav class="w-full bg-white dark:bg-neutral-800 h-16 shadow-sm dark:shadow-sm flex items-center border-b border-neutral-100 dark:border-neutral-700">
-        <div class="flex gap-6 items-center w-full">
-                <a class="ml-5" asp-area="" asp-controller="Home" asp-action="Index">
+        <nav class="w-full bg-white dark:bg-neutral-800 h-20 shadow-sm dark:shadow-sm flex items-center border-b border-neutral-100 dark:border-neutral-700">
+           <div class="container mx-auto px-40">
+            <div class="flex gap-6 items-center w-full">
+                <a asp-area="" asp-controller="Home" asp-action="Index">
                     <img class="h-14" src="images/shopping-logo.webp" alt="Shopping Cart" />
                 </a>
                 <div>
                     <ul class="flex gap-6">
-                        <li>
-                            <a class="hover:underline text-black dark:text-white" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        <li class="transition ease-in-out delay-150 hover:translate-x-1 hover:duration-300 hover:border-b-2 hover:border-red-400">
+                            <a class="text-gray-600 dark:text-gray-500 text-sm" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
-                        <li>
-                            <a class="hover:underline text-black dark:text-white" asp-area="" asp-controller="Home" asp-action="Index">Services</a>
+                        <li class="transition ease-in-out delay-150 hover:translate-x-1 hover:duration-300 hover:border-b-2 hover:border-red-400">
+                            <a class="text-gray-600 dark:text-gray-500 text-sm" asp-area="" asp-controller="Home" asp-action="Index">Shop</a>
                         </li>
-                        <li>
-                            <a class="hover:underline text-black dark:text-white" asp-area="Products" asp-controller="Home" asp-action="Index">Products</a>
+                        <li class="transition ease-in-out delay-150 hover:translate-x-1 hover:duration-300 hover:border-b-2 hover:border-red-400">
+                            <a class="text-gray-600 dark:text-gray-500 text-sm" asp-area="Products" asp-controller="Home" asp-action="Index">Products</a>
                         </li>
-                        <li>
-                            <a class="hover:underline text-black dark:text-white" asp-area="" asp-controller="Home" asp-action="Privacy">About us</a>
+                        <li class="transition ease-in-out delay-150 hover:translate-x-1 hover:duration-300 hover:border-b-2 hover:border-red-400">
+                            <a class="text-gray-600 dark:text-gray-500 text-sm" asp-area="" asp-controller="Home" asp-action="Privacy">About us</a>
                         </li>
                     </ul>
                 </div>
-                 <div class="ml-auto mr-4  flex gap-2 items-center">
-                <p class="text-sm text-black dark:text-white">Dark Mode</p>
-                     <label class="switch">
+                <div class="ml-auto  flex gap-2 items-center">
+                    <div class="flex gap-1">
+                        <a class="text-gray-600 dark:text-gray-500 text-sm hover:underline" asp-area="" asp-controller="Home" asp-action="Privacy">Register</a>
+                        /
+                        <a class="text-gray-600 dark:text-gray-500 text-sm hover:underline" asp-area="" asp-controller="Home" asp-action="Privacy">Sign in</a>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-500 text-sm">Dark Mode</p>
+                    <label class="switch">
                         <input type="checkbox" id="chkLocalStorage">
                         <span class="slider round"></span>
                     </label>
-                </div> 
+                </div>
             </div>
+           </div>
+           
         </nav>
-    
-    <div class="bg-white dark:bg-neutral-800 h-screen">
-        <main role="main">
+
+    <div class="bg-white dark:bg-neutral-800">
+        <main role="main" class="container mx-auto px-40">
             @RenderBody()
-        </main>
+        </main> 
     </div>
 
-    <footer class="bg-white dark:bg-neutral-800 border-t border-neutral-100 dark:border-neutral-700 h-16 flex items-center justify-center">
-        <div class="text-black dark:text-white text-xs">
-            &copy; 2024 - Shopping Cart
+    <footer class="bg-white dark:bg-neutral-800 flex items-center justify-center">
+        <div class="container mx-auto px-40">
+            
+            
+            <div class="text-black dark:text-white text-xs">
+                &copy; 2024 - Shopping Cart
+            </div>
         </div>
+        
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
