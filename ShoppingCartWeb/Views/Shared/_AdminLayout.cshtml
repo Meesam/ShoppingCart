@@ -40,13 +40,10 @@
         </main>
     </div>
 
-    <footer class="bg-white dark:bg-neutral-800 border-t border-neutral-100 dark:border-neutral-700 h-16 flex items-center justify-center">
-        <div class="text-black dark:text-white text-xs">
-            &copy; 2024 - Shopping Cart
-        </div>
-    </footer>
+    <partial name="_FooterPartial" />
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

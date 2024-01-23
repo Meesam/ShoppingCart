@@ -1,10 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     darkMode: 'class',
-    content: ["./Views/**/*.{cshtml,razor}", "./wwwroot/js/**/*.js", "./Areas/**/*.{cshtml,razor}"],
+    content: ["./Views/**/*.{cshtml,razor}", "./wwwroot/js/**/*.js", "./Areas/**/*.{cshtml,razor}", "./node_modules/flowbite/**/*.js"],
     theme: {
         extend: {},
     },
-    plugins: [],
+    plugins: [require('flowbite/plugin')],
 }
 

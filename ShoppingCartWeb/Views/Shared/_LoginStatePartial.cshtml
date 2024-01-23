@@ -1,8 +1,18 @@
 ﻿@inject SignInManager<AppUser> SignInManager
 
-<div class="flex gap-1">
+<div class="flex gap-4 items-center">
     @if(SignInManager.IsSignedIn(User))
     {
-        <a class="text-gray-600 dark:text-gray-500 text-sm hover:underline" asp-area="Authentication" asp-controller="Auth" asp-action="Logout">Logout</a>
+        <button type="button" class="relative inline-flex items-center p-2 text-sm font-medium text-center text-white bg-red-400 rounded-full hover:bg-red-500 focus:ring-4 focus:outline-none focus:ring-red-300 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800">
+            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.3L19 7H7.3" />
+            </svg>
+            <span class="sr-only">Notifications</span>
+            <div class="absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-red-500 border-2 border-white rounded-full -top-2 -end-2 dark:border-gray-900">20</div>
+        </button>
+        <div class="relative w-10 h-10 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600">
+            <svg class="absolute w-12 h-12 text-gray-400 -left-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg>
+        </div>
+        @* <a class="text-gray-600 dark:text-gray-500 text-sm hover:underline" asp-area="Authentication" asp-controller="Auth" asp-action="Logout">Logout</a> *@
     }
 </div>

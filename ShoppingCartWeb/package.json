@@ -1,11 +1,24 @@
 {
 
   "scripts": {
+
     "tw:dev": "npx tailwindcss -i ./wwwroot/css/input.css -o ./wwwroot/css/output.css",
+
     "tw:dev-watch": "npx tailwindcss -i ./wwwroot/css/input.css -o ./wwwroot/css/output.css --watch"
+
   },
 
   "devDependencies": {
+
     "tailwindcss": "^3.4.1"
+
+  },
+
+  "dependencies": {
+
+    "flowbite": "^2.2.1"
+
   }
+
 }
+
