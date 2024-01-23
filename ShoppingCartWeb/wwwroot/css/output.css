@@ -734,6 +734,10 @@ html {
   margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 }
 
+.justify-self-start{
+  justify-self: start;
+}
+
 .rounded-lg{
   border-radius: 0.5rem;
 }

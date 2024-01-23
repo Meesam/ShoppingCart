@@ -14,19 +14,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Areas\Admin\Controllers\" />
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Admin\Models\" />
-    <Folder Include="Areas\Admin\Views\" />
     <Folder Include="Areas\Authentication\Data\" />
-    <Folder Include="Areas\ClientAdmin\Controllers\" />
     <Folder Include="Areas\ClientAdmin\Data\" />
     <Folder Include="Areas\ClientAdmin\Models\" />
-    <Folder Include="Areas\ClientAdmin\Views\" />
-    <Folder Include="Areas\Customers\Controllers\" />
     <Folder Include="Areas\Customers\Data\" />
     <Folder Include="Areas\Customers\Models\" />
-    <Folder Include="Areas\Customers\Views\" />
     <Folder Include="Areas\Products\Data\" />
     <Folder Include="Areas\Products\Models\" />
   </ItemGroup>

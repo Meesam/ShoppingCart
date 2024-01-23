@@ -1,5 +1,4 @@
-﻿@using ShoppingCartWeb.Areas.Authentication.Models;
-@model LoginVM;
+﻿@model LoginVM;
 
 @{
     ViewData["Title"] = "Login";
@@ -8,18 +7,33 @@
 <div class="flex h-screen justify-center items-center">
     <div class="flex flex-col bg-neutral-100 w-[30rem] h-auto p-10 rounded-lg justify-center">
         <p class="text-2xl font-semibold text-center text-neutral-500">Login</p>
-        <div class="flex flex-col space-y-4">
-            <div class="flex flex-col space-y-1">
-                <label class="text-sm text-neutral-500" asp-for="Name">Username</label>
-                <input class="p-2 rounded-md border text-sm text-neutral-500" type="email" asp-for="Name" value=@Model.Username />
+        <form asp-action="Login" method="post">
+          <div asp-validation-summary="ModelOnly"></div>
+            <div class="flex flex-col space-y-4">
+                <div class="flex flex-col space-y-1">
+                    <label class="text-sm text-neutral-500" asp-for="Username">Username</label>
+                    <input class="p-2 rounded-md border text-sm text-neutral-500" asp-for="Username" autocomplete="off" />
+                    <span class="text-xs text-red-400" asp-validation-for="Username"></span>
+                </div>
+                <div class="flex flex-col space-y-1">
+                    <label class="text-sm text-neutral-500" asp-for="Password">Password</label>
+                    <input class="p-2 rounded-md border text-sm text-neutral-500" asp-for="Password" autocomplete="off" />
+                    <span class="text-sm text-red-400" asp-validation-for="Password"></span>
+                </div>
+                <div class="flex gap-1 items-center justify-self-start">
+                    <input  type="checkbox" asp-for="RememberMe" />
+                    <p class="text-xs text-neutral-500">@Html.DisplayNameFor(a => a.RememberMe)</p>
+                </div>
+                <div class="flex flex-col space-y-1">
+                    <input type="submit" value="Login" class="p-4 bg-red-400 rounded-md cursor-pointer border hover:bg-red-500 text-white" />
+                </div>
             </div>
-            <div class="flex flex-col space-y-1">
-                <label class="text-sm text-neutral-500" asp-for="Password">Password</label>
-                <input class="p-2 rounded-md border text-sm text-neutral-500" type="password" asp-for="Password" value=@Model.Password />
-            </div>
-            <div class="flex flex-col space-y-1">
-                <input class="p-4 bg-red-400 rounded-md cursor-pointer border hover:bg-red-500 text-white" type="submit" value="Login" name="Login" />
-            </div>
-        </div>
+        </form>
     </div>
 </div>
+
+@section Scripts{
+     @{
+             await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        }
+ }
