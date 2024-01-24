@@ -12,6 +12,10 @@ namespace ShoppingCartWeb.Areas.Authentication.Models
         [DataType(DataType.EmailAddress)]
         public string? Email { get; set; }
 
+        [Required(ErrorMessage = "Dob is required")]
+        [DisplayName("Dob")]
+        public DateTime DateOfBirth { get; set; }
+
         [Required(ErrorMessage = "Password is required")]
         [DataType(DataType.Password)]
         public string? Password { get; set; }

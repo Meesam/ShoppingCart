@@ -13,5 +13,16 @@ namespace ShoppingCart.Models
         [Required(ErrorMessage = "Name is required")]
         [MaxLength(100)]
         public string Name { get; set; } = string.Empty;
+
+        [Required(ErrorMessage = "Dob is required")]
+        public DateTime DateOfBirth { get; set; } = DateTime.MinValue;
+
+        public List<Contact> ContactsList { get; set; } = new List<Contact>();
+
+        public List<Order> OrderList { get; set; } = new List<Order>();
+
+        public List<WishList> WishLists { get; set; } = new List<WishList>();
+
+        public List<Payment> PaymentList { get; set; } = new List<Payment>();
     }
 }

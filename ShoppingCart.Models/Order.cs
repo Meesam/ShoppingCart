@@ -14,5 +14,14 @@ namespace ShoppingCart.Models
 
         [Required]
         public string OrderStatus { get; set; } = string.Empty;
+
+        [Required]
+        public DateTime OrderDate { get; set; } = DateTime.MinValue;
+
+        [MaxLength(200)]
+        public string? PaymentMethod { get; set; }
+
+        [MaxLength(100)]
+        public string? PaymentStatus { get; set; }
     }
 }
