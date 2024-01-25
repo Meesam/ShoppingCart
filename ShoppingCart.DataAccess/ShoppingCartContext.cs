@@ -16,5 +16,6 @@ namespace ShoppingCart.DataAccess
         public DbSet<WishList> WishLists { get; set; }
         public DbSet<Contact> Contacts { get; set; }
         public DbSet<Payment> Payments { get; set; }
+        public DbSet<Cart> Carts { get; set; }
     }
 }

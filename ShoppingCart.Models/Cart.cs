@@ -11,5 +11,7 @@ namespace ShoppingCart.Models
     {
         [Key]
         public int Id { get; set; }
+
+        public List<ProductOrder> ProductOrders { get; set; } = new List<ProductOrder>();
     }
 }

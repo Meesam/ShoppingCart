@@ -23,5 +23,7 @@ namespace ShoppingCart.Models
         public string Type { get; set; } = string.Empty;
 
         public string? Description { get; set; }
+
+        public List<Product> Products { get; set; } = new List<Product>();
     }
 }

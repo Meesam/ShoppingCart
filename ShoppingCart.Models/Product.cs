@@ -22,8 +22,14 @@ namespace ShoppingCart.Models
 
         [Required(ErrorMessage = "Product description is required")]
         [MinLength(5)]
+
         public string ProductDescription { get; set; } = string.Empty;
 
+        [Required(ErrorMessage = "Category is required.")]
+        public int CategoryId { get; set; }
+
+        public Category? Category { get; set; }
+        public List<ProductImage> ProductImages { get; set; } = new List<ProductImage>();
 
     }
 }
