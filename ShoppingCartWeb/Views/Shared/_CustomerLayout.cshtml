@@ -29,7 +29,9 @@
                     </ul>
                 </div>
                 <div class="ml-auto  flex gap-2 items-center">
-                    <partial name="_LoginStatePartial" />
+                    @{
+                        await Html.RenderPartialAsync("_LoginStatePartial");
+                    }
                     <partial name="_ColorModePartial" />
                 </div>
             </div>
@@ -47,6 +49,8 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/datepicker.min.js"></script>
+    <base href="~/" />
+    <script src="_framework/blazor.server.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>

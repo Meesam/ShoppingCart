@@ -5,13 +5,13 @@ VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShoppingCartWeb", "ShoppingCartWeb\ShoppingCartWeb.csproj", "{541DFBA8-009A-4926-B41B-2E6E7659EEB7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingCart.DataAccess", "ShoppingCart.DataAccess\ShoppingCart.DataAccess.csproj", "{21D910C1-D302-44B4-A79C-D5C8B388D272}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShoppingCart.DataAccess", "ShoppingCart.DataAccess\ShoppingCart.DataAccess.csproj", "{21D910C1-D302-44B4-A79C-D5C8B388D272}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingCart.Models", "ShoppingCart.Models\ShoppingCart.Models.csproj", "{83FE4C35-DE97-4847-BA35-074FC9349DDF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShoppingCart.Models", "ShoppingCart.Models\ShoppingCart.Models.csproj", "{83FE4C35-DE97-4847-BA35-074FC9349DDF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingCart.EmailService", "ShoppingCart.EmailService\ShoppingCart.EmailService.csproj", "{3D4590FC-BADF-415A-9F3F-F43694C82D81}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShoppingCart.EmailService", "ShoppingCart.EmailService\ShoppingCart.EmailService.csproj", "{3D4590FC-BADF-415A-9F3F-F43694C82D81}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingCart.PaymentService", "ShoppingCart.PaymentService\ShoppingCart.PaymentService.csproj", "{3F8863E9-A1AB-4844-8CB6-15AC4BC91D0B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShoppingCart.PaymentService", "ShoppingCart.PaymentService\ShoppingCart.PaymentService.csproj", "{3F8863E9-A1AB-4844-8CB6-15AC4BC91D0B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
